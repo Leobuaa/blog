@@ -14,11 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::auth();
 
-Route::get('/layout', function () {
-	return view('layout');
-});
-
-Route::get('student', function () {
-	return view('student.index');
-});
+Route::get('/home', 'HomeController@index');
